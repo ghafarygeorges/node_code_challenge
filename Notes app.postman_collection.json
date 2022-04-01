@@ -1,0 +1,4760 @@
+{
+	"info": {
+		"_postman_id": "8c7f7093-1216-410b-ae4e-62d3f3dcb248",
+		"name": "Notes app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/auth/signup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "georgesghafary00@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Georges Ghafary",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/signup",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4ba-kBmDKN1ffuKc0RnWiizm1CEBqYg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:48:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully!\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6InJlcXVpcmUiLCJwYXNzd29yZCI6InJlcXVpcmUiLCJlbWFpbCI6InJlcXVpcmUifSwic3RhdGVzIjp7Imlnbm9yZSI6e30sImRlZmF1bHQiOnt9LCJpbml0Ijp7fSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6eyJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZW1haWwiOnRydWV9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsIl9pZCI6IjYyNDZkODdjYjhiYTY1OWIyNjBjNTdhNSIsIm9wIjpudWxsLCJzYXZpbmciOm51bGwsIiR2ZXJzaW9uRXJyb3IiOm51bGwsInNhdmVPcHRpb25zIjpudWxsLCJ2YWxpZGF0aW5nIjpudWxsLCJjYWNoZWRSZXF1aXJlZCI6e30sImJhY2t1cCI6eyJhY3RpdmVQYXRocyI6eyJtb2RpZnkiOnsiZW1haWwiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJuYW1lIjp0cnVlfSwiZGVmYXVsdCI6eyJfaWQiOnRydWV9fSwidmFsaWRhdGlvbkVycm9yIjpudWxsfSwiaW5zZXJ0aW5nIjp0cnVlLCJzYXZlZFN0YXRlIjp7fX0sIiRpc05ldyI6ZmFsc2UsIl9kb2MiOnsiZW1haWwiOiJnZW9yZ2VzZ2hhZmFyeTAwQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEyJHpZT00zSGtqMEdMM24vOVBweUtvWk9YZVRDdXJYVGVYbkVRdXRDLzhlVDJwYi5DZGJiY2pPIiwibmFtZSI6Ikdlb3JnZXMgR2hhZmFyeSIsIl9pZCI6IjYyNDZkODdjYjhiYTY1OWIyNjBjNTdhNSIsIl9fdiI6MH0sImlhdCI6MTY0ODgxMDEwOCwiZXhwIjoxNjQ4ODE3MzA4fQ.sGbfh1PhyfcjWqwNjjZ5UGN71RBKXctpcosseWIKGHA\"\n}"
+						},
+						{
+							"name": "Email Already In Use",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "georgesghafary00@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Georges Ghafary",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/signup",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-yiNQAP4Ljb+5SDlqMlU/xN0pjww\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:49:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email already in use.\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "georges",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/signup",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "603"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25b-+DI9MFmebyLJY2s9+vGmypRbBrg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:51:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"body\": [\n            {\n                \"message\": \"\\\"email\\\" must be a valid email\",\n                \"path\": [\n                    \"email\"\n                ],\n                \"type\": \"string.email\",\n                \"context\": {\n                    \"value\": \"georges\",\n                    \"invalids\": [\n                        \"georges\"\n                    ],\n                    \"label\": \"email\",\n                    \"key\": \"email\"\n                }\n            },\n            {\n                \"message\": \"\\\"password\\\" length must be at least 6 characters long\",\n                \"path\": [\n                    \"password\"\n                ],\n                \"type\": \"string.min\",\n                \"context\": {\n                    \"limit\": 6,\n                    \"value\": \"12\",\n                    \"label\": \"password\",\n                    \"key\": \"password\"\n                }\n            },\n            {\n                \"message\": \"\\\"name\\\" is not allowed to be empty\",\n                \"path\": [\n                    \"name\"\n                ],\n                \"type\": \"string.empty\",\n                \"context\": {\n                    \"label\": \"name\",\n                    \"value\": \"\",\n                    \"key\": \"name\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "georgesghafary00@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "979"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d3-6HR8Le/khgXRScvHHG4SJi38gq0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:52:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful!\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ2ZDg3Y2I4YmE2NTliMjYwYzU3YTUifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ2ZDg3Y2I4YmE2NTliMjYwYzU3YTUiLCJlbWFpbCI6Imdlb3JnZXNnaGFmYXJ5MDBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTIkellPTTNIa2owR0wzbi85UHB5S29aT1hlVEN1clhUZVhuRVF1dEMvOGVUMnBiLkNkYmJjak8iLCJuYW1lIjoiR2VvcmdlcyBHaGFmYXJ5IiwiX192IjowfSwiaWF0IjoxNjQ4ODEwMzU4LCJleHAiOjE2NDg4MTc1NTh9.yzELqZEQx-OnMQ6DLrbGW8M203haAggqtgx0WFZLFcA\"\n}"
+						},
+						{
+							"name": "Email Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "georgesghafary@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-cnKnD0EFnZ2fVWbwSfYk5/YeSqw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:53:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A user with this email could not be found.\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "georges",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "465"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d1-jGaR1SOSDG4b+RoWz8PSwHdgySo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:53:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"body\": [\n            {\n                \"message\": \"\\\"email\\\" must be a valid email\",\n                \"path\": [\n                    \"email\"\n                ],\n                \"type\": \"string.email\",\n                \"context\": {\n                    \"value\": \"georges\",\n                    \"invalids\": [\n                        \"georges\"\n                    ],\n                    \"label\": \"email\",\n                    \"key\": \"email\"\n                }\n            },\n            {\n                \"message\": \"\\\"password\\\" length must be at least 6 characters long\",\n                \"path\": [\n                    \"password\"\n                ],\n                \"type\": \"string.min\",\n                \"context\": {\n                    \"limit\": 6,\n                    \"value\": \"123\",\n                    \"label\": \"password\",\n                    \"key\": \"password\"\n                }\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Wrong Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "georgesghafary00@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-LtFPoUNxcP1pk9eHNRMswU3jGIM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:54:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Wrong password!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjcifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMiRmT3FzQVBNb0JFYWUxSmUveW5YRVN1cHd5OFk4RTgyUXRmT1ZYdUczdGZRc1BrU3A2eUFMMiIsIm5hbWUiOiJ0ZXN0IiwiX192IjowfSwiaWF0IjoxNjQ4NzM0NDM3LCJleHAiOjE2NDg3NDE2Mzd9.f4JhU566wX0YY7CwBamnm3nG235bxTzgeEbYohus3X4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/categories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:55:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:58:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "185"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b9-SQaamhA2rYt8DHUd4+vCNLdVEMM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:02:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6246db56b8ba659b260c57ac\",\n        \"name\": \"cat 1\",\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6246db9ab8ba659b260c57ae\",\n        \"name\": \"cat 2\",\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Category By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6InJlcXVpcmUiLCJwYXNzd29yZCI6InJlcXVpcmUiLCJlbWFpbCI6InJlcXVpcmUifSwic3RhdGVzIjp7Imlnbm9yZSI6e30sImRlZmF1bHQiOnt9LCJpbml0Ijp7fSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6eyJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZW1haWwiOnRydWV9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsIl9pZCI6IjYyNDU2N2FiMTMwM2UwNTFhZjUzNzZmNyIsIm9wIjpudWxsLCJzYXZpbmciOm51bGwsIiR2ZXJzaW9uRXJyb3IiOm51bGwsInNhdmVPcHRpb25zIjpudWxsLCJ2YWxpZGF0aW5nIjpudWxsLCJjYWNoZWRSZXF1aXJlZCI6e30sImJhY2t1cCI6eyJhY3RpdmVQYXRocyI6eyJtb2RpZnkiOnsiZW1haWwiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJuYW1lIjp0cnVlfSwiZGVmYXVsdCI6eyJfaWQiOnRydWV9fSwidmFsaWRhdGlvbkVycm9yIjpudWxsfSwiaW5zZXJ0aW5nIjp0cnVlLCJzYXZlZFN0YXRlIjp7fX0sIiRpc05ldyI6ZmFsc2UsIl9kb2MiOnsiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiIkMmEkMTIkZk9xc0FQTW9CRWFlMUplL3luWEVTdXB3eThZOEU4MlF0Zk9WWHVHM3RmUXNQa1NwNnlBTDIiLCJuYW1lIjoidGVzdCIsIl9pZCI6IjYyNDU2N2FiMTMwM2UwNTFhZjUzNzZmNyIsIl9fdiI6MH0sImlhdCI6MTY0ODcxNTY5MSwiZXhwIjoxNjQ4NzIyODkxfQ.VYIuzG5O1sc4eJPOPECeyPB2MOvT7MsUUqp1K016ZeE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/categories/id?categoryId=62456bff077c08ed2b233835",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categories",
+								"id"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "62456bff077c08ed2b233835"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories/id?categoryId=6246db56b8ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										"id"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:03:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories/id?categoryId=6246db56b8ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										"id"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:03:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories/id?categoryId=6246db56b8ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										"id"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-lVSSTJmRXZsyL6vJaJAxTm+3900\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:04:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6246db56b8ba659b260c57ac\",\n    \"name\": \"cat 1\",\n    \"user\": \"6246d87cb8ba659b260c57a5\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Category Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories/id?categoryId=6246db56b7ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										"id"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b7ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-VVtvHpq+R+bZPXgNUtuyR9ubHko\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:06:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Could not find category.\"\n}"
+						},
+						{
+							"name": "Not Authorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories/id?categoryId=6246db56b8ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										"id"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-NZh6IwDr7llqfphomG6dVruZJeI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:07:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authorized!\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/categories/id?categoryId=123",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										"id"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "359"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"167-Qhpk6JVdD7m1lMlUJq0AukqcPKE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:08:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"query\": [\n            {\n                \"message\": \"\\\"categoryId\\\" with value \\\"123\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"categoryId\"\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"123\",\n                    \"label\": \"categoryId\",\n                    \"key\": \"categoryId\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6InJlcXVpcmUiLCJwYXNzd29yZCI6InJlcXVpcmUiLCJlbWFpbCI6InJlcXVpcmUifSwic3RhdGVzIjp7Imlnbm9yZSI6e30sImRlZmF1bHQiOnt9LCJpbml0Ijp7fSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6eyJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZW1haWwiOnRydWV9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsIl9pZCI6IjYyNDU2N2FiMTMwM2UwNTFhZjUzNzZmNyIsIm9wIjpudWxsLCJzYXZpbmciOm51bGwsIiR2ZXJzaW9uRXJyb3IiOm51bGwsInNhdmVPcHRpb25zIjpudWxsLCJ2YWxpZGF0aW5nIjpudWxsLCJjYWNoZWRSZXF1aXJlZCI6e30sImJhY2t1cCI6eyJhY3RpdmVQYXRocyI6eyJtb2RpZnkiOnsiZW1haWwiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJuYW1lIjp0cnVlfSwiZGVmYXVsdCI6eyJfaWQiOnRydWV9fSwidmFsaWRhdGlvbkVycm9yIjpudWxsfSwiaW5zZXJ0aW5nIjp0cnVlLCJzYXZlZFN0YXRlIjp7fX0sIiRpc05ldyI6ZmFsc2UsIl9kb2MiOnsiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiIkMmEkMTIkZk9xc0FQTW9CRWFlMUplL3luWEVTdXB3eThZOEU4MlF0Zk9WWHVHM3RmUXNQa1NwNnlBTDIiLCJuYW1lIjoidGVzdCIsIl9pZCI6IjYyNDU2N2FiMTMwM2UwNTFhZjUzNzZmNyIsIl9fdiI6MH0sImlhdCI6MTY0ODcxNTY5MSwiZXhwIjoxNjQ4NzIyODkxfQ.VYIuzG5O1sc4eJPOPECeyPB2MOvT7MsUUqp1K016ZeE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "cat 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/categories/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cat 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:59:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cat 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 10:59:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cat 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-vsYwyo6JgQ+6D0UcgQyD4tmcpLw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:00:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category created successfully!\",\n    \"category\": {\n        \"name\": \"cat 1\",\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"_id\": \"6246db56b8ba659b260c57ac\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "255"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ff-kSVoRSEe2NLPgY3UErP4f7ixuMM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:01:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"body\": [\n            {\n                \"message\": \"\\\"name\\\" is not allowed to be empty\",\n                \"path\": [\n                    \"name\"\n                ],\n                \"type\": \"string.empty\",\n                \"context\": {\n                    \"label\": \"name\",\n                    \"value\": \"\",\n                    \"key\": \"name\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6InJlcXVpcmUiLCJwYXNzd29yZCI6InJlcXVpcmUiLCJlbWFpbCI6InJlcXVpcmUifSwic3RhdGVzIjp7Imlnbm9yZSI6e30sImRlZmF1bHQiOnt9LCJpbml0Ijp7fSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6eyJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZW1haWwiOnRydWV9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsIl9pZCI6IjYyNDU2N2FiMTMwM2UwNTFhZjUzNzZmNyIsIm9wIjpudWxsLCJzYXZpbmciOm51bGwsIiR2ZXJzaW9uRXJyb3IiOm51bGwsInNhdmVPcHRpb25zIjpudWxsLCJ2YWxpZGF0aW5nIjpudWxsLCJjYWNoZWRSZXF1aXJlZCI6e30sImJhY2t1cCI6eyJhY3RpdmVQYXRocyI6eyJtb2RpZnkiOnsiZW1haWwiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJuYW1lIjp0cnVlfSwiZGVmYXVsdCI6eyJfaWQiOnRydWV9fSwidmFsaWRhdGlvbkVycm9yIjpudWxsfSwiaW5zZXJ0aW5nIjp0cnVlLCJzYXZlZFN0YXRlIjp7fX0sIiRpc05ldyI6ZmFsc2UsIl9kb2MiOnsiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicGFzc3dvcmQiOiIkMmEkMTIkZk9xc0FQTW9CRWFlMUplL3luWEVTdXB3eThZOEU4MlF0Zk9WWHVHM3RmUXNQa1NwNnlBTDIiLCJuYW1lIjoidGVzdCIsIl9pZCI6IjYyNDU2N2FiMTMwM2UwNTFhZjUzNzZmNyIsIl9fdiI6MH0sImlhdCI6MTY0ODcxNTY5MSwiZXhwIjoxNjQ4NzIyODkxfQ.VYIuzG5O1sc4eJPOPECeyPB2MOvT7MsUUqp1K016ZeE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "category 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/categories/?categoryId=62456bff077c08ed2b233835",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categories",
+								""
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "62456bff077c08ed2b233835"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "category 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/?categoryId=6246db56b8ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:19:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "category 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/?categoryId=6246db56b8ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:20:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "category 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/?categoryId=6246db56b8ba659b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba659b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-OZLvA0hKMkFjnkS3Wk2h3YtqaK0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:21:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category updated!\",\n    \"category\": {\n        \"_id\": \"6246db56b8ba659b260c57ac\",\n        \"name\": \"category 1\",\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Category Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "category 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/?categoryId=6246db56b8ba649b260c57ac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "6246db56b8ba649b260c57ac"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-VVtvHpq+R+bZPXgNUtuyR9ubHko\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:22:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Could not find category.\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/categories/?categoryId=123123",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "123123"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "513"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"201-q1F0Q9EpxVh11s6Xbtk/JptFcOg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:22:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"query\": [\n            {\n                \"message\": \"\\\"categoryId\\\" with value \\\"123123\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"categoryId\"\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"123123\",\n                    \"label\": \"categoryId\",\n                    \"key\": \"categoryId\"\n                }\n            }\n        ],\n        \"body\": [\n            {\n                \"message\": \"\\\"name\\\" is not allowed to be empty\",\n                \"path\": [\n                    \"name\"\n                ],\n                \"type\": \"string.empty\",\n                \"context\": {\n                    \"label\": \"name\",\n                    \"value\": \"\",\n                    \"key\": \"name\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category/Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjcifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMiRmT3FzQVBNb0JFYWUxSmUveW5YRVN1cHd5OFk4RTgyUXRmT1ZYdUczdGZRc1BrU3A2eUFMMiIsIm5hbWUiOiJ0ZXN0IiwiX192IjowfSwiaWF0IjoxNjQ4NzM0NDM3LCJleHAiOjE2NDg3NDE2Mzd9.f4JhU566wX0YY7CwBamnm3nG235bxTzgeEbYohus3X4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryIds\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/categories/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryIds\":[]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:16:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryIds\":[]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:16:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryIds\":[\"6246db56b8ba659b260c57ac\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-mBZnyvq+KZR4HaTj8dIxlVRiulA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:19:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category successfully deleted!\"\n}"
+						},
+						{
+							"name": "Note(s) Still Linked To Category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryIds\":[\"6246db9ab8ba659b260c57ae\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-vMFVmMdbJRxSpOeBFk00rgLYzTA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:18:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Please make sure no notes are still linked to the categories you want to delete.\"\n}"
+						},
+						{
+							"name": "Category Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryIds\":[\"6246db56b9ba659b260c57ac\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-IL2x6oYyCUNyXBUrFU67PR1it6E\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:20:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Could not find any matching categories to delete.\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryIds\":[\"123\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/categories/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "358"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"166-7GYVIVWf/M4GzbpU53I4mUw24eM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:20:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"body\": [\n            {\n                \"message\": \"\\\"categoryIds[0]\\\" with value \\\"123\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"categoryIds\",\n                    0\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"123\",\n                    \"label\": \"categoryIds[0]\",\n                    \"key\": 0\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "Get Notes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjcifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMiRmT3FzQVBNb0JFYWUxSmUveW5YRVN1cHd5OFk4RTgyUXRmT1ZYdUczdGZRc1BrU3A2eUFMMiIsIm5hbWUiOiJ0ZXN0IiwiX192IjowfSwiaWF0IjoxNjQ4NzQzMzEzLCJleHAiOjE2NDg3NTA1MTN9.oSsZhTmm6FUNtXt_e6if9me4s_6GMxOWCJyPQkw1ItY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sort\": -1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notes/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sort\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:07:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sort\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:08:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sort\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"156-qADVNwYYt5cmJTsk9dMIoEvpmDk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:14:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6246e24bb8ba659b260c57ba\",\n        \"content\": \"This is my newest note update\",\n        \"category\": {\n            \"_id\": \"6246db9ab8ba659b260c57ae\",\n            \"name\": \"cat 2\",\n            \"user\": \"6246d87cb8ba659b260c57a5\",\n            \"__v\": 0\n        },\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"tags\": [\n            \"Family\",\n            \"Not Important\",\n            \"Misc\"\n        ],\n        \"createdAt\": \"2022-04-01T11:30:19.907Z\",\n        \"updatedAt\": \"2022-04-01T11:42:13.504Z\",\n        \"__v\": 0\n    }\n]"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sort\": \"abc\",\r\n    \"tags\":[1],\r\n    \"categoryId\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "619"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26b-YMlEZ7OQy2yBVvgcGp1QlH97VE0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:15:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"body\": [\n            {\n                \"message\": \"\\\"categoryId\\\" with value \\\"123\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"categoryId\"\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"123\",\n                    \"label\": \"categoryId\",\n                    \"key\": \"categoryId\"\n                }\n            },\n            {\n                \"message\": \"\\\"tags[0]\\\" must be a string\",\n                \"path\": [\n                    \"tags\",\n                    0\n                ],\n                \"type\": \"string.base\",\n                \"context\": {\n                    \"label\": \"tags[0]\",\n                    \"value\": 1,\n                    \"key\": 0\n                }\n            },\n            {\n                \"message\": \"\\\"sort\\\" must be a number\",\n                \"path\": [\n                    \"sort\"\n                ],\n                \"type\": \"number.base\",\n                \"context\": {\n                    \"label\": \"sort\",\n                    \"value\": \"abc\",\n                    \"key\": \"sort\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Note By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjcifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMiRmT3FzQVBNb0JFYWUxSmUveW5YRVN1cHd5OFk4RTgyUXRmT1ZYdUczdGZRc1BrU3A2eUFMMiIsIm5hbWUiOiJ0ZXN0IiwiX192IjowfSwiaWF0IjoxNjQ4NzM0NDM3LCJleHAiOjE2NDg3NDE2Mzd9.f4JhU566wX0YY7CwBamnm3nG235bxTzgeEbYohus3X4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/notes/id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notes",
+								"id"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/notes/id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										"id"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:50:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/notes/id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										"id"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:50:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/notes/id?noteId=6246e24bb8ba659b260c57ba",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										"id"
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6246e24bb8ba659b260c57ba"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"154-rfmtA9xOn2Hz5uEATGwnpyWxHdQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:51:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6246e24bb8ba659b260c57ba\",\n    \"content\": \"This is my newest note update\",\n    \"category\": {\n        \"_id\": \"6246db9ab8ba659b260c57ae\",\n        \"name\": \"cat 2\",\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"__v\": 0\n    },\n    \"user\": \"6246d87cb8ba659b260c57a5\",\n    \"tags\": [\n        \"Family\",\n        \"Not Important\",\n        \"Misc\"\n    ],\n    \"createdAt\": \"2022-04-01T11:30:19.907Z\",\n    \"updatedAt\": \"2022-04-01T11:42:13.504Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Note Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/notes/id?noteId=6246e24bb8ba649b260c57ba",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										"id"
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6246e24bb8ba649b260c57ba"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-LbSQCRdaWdLTL6dwGyowQc8SHsU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:52:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Could not find note.\"\n}"
+						},
+						{
+							"name": "Not Authorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/notes/id?noteId=6246e24bb8ba659b260c57ba",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										"id"
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6246e24bb8ba659b260c57ba"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-NZh6IwDr7llqfphomG6dVruZJeI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:05:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authorized!\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/notes/id?noteId=123",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										"id"
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "343"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"157-6R+KuQSaXCBBVoXfoaPFYBIUXng\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:06:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"query\": [\n            {\n                \"message\": \"\\\"noteId\\\" with value \\\"123\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"noteId\"\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"123\",\n                    \"label\": \"noteId\",\n                    \"key\": \"noteId\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjcifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMiRmT3FzQVBNb0JFYWUxSmUveW5YRVN1cHd5OFk4RTgyUXRmT1ZYdUczdGZRc1BrU3A2eUFMMiIsIm5hbWUiOiJ0ZXN0IiwiX192IjowfSwiaWF0IjoxNjQ4NzM0NDM3LCJleHAiOjE2NDg3NDE2Mzd9.f4JhU566wX0YY7CwBamnm3nG235bxTzgeEbYohus3X4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"This is the content of my note 1\",\r\n    \"categoryId\": \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notes/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is the content of my note 1\",\r\n    \"categoryId\": \"6246db56b8ba659b260c57ac\",\r\n    \"tags\": [\"Work\", \"Important\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:29:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is the content of my note 1\",\r\n    \"categoryId\": \"6246db56b8ba659b260c57ac\",\r\n    \"tags\": [\"Work\", \"Important\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:29:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is the content of my note 1\",\r\n    \"categoryId\": \"6246db56b8ba659b260c57ac\",\r\n    \"tags\": [\"Work\", \"Important\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-focbGfo9qZGiH5BsxaV650hFotw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:30:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note created successfully!\",\n    \"note\": {\n        \"content\": \"This is the content of my note 1\",\n        \"category\": \"6246db56b8ba659b260c57ac\",\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"tags\": [\n            \"Work\",\n            \"Important\"\n        ],\n        \"_id\": \"6246e24bb8ba659b260c57ba\",\n        \"createdAt\": \"2022-04-01T11:30:19.907Z\",\n        \"updatedAt\": \"2022-04-01T11:30:19.907Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Category Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is the content of my note 1\",\r\n    \"categoryId\": \"6246db56b8ba658b260c57ac\",\r\n    \"tags\": [\"Work\", \"Important\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-7Ykf80AhQdJsSmPW0fqQkBl+fNY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:31:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category does not exist!\"\n}"
+						},
+						{
+							"name": "Not Authorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is the content of my note 1\",\r\n    \"categoryId\": \"6246db56b8ba659b260c57ac\",\r\n    \"tags\": [\"Work\", \"Important\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-O9Smjsci0SpcKyrpC2YLhS8oEdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:32:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authorized to use this category!\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"\",\r\n    \"categoryId\": \"123\",\r\n    \"tags\": [1]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "639"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27f-Flo4hc4KQR6RunwZYzmrj/x3J8k\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:33:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"body\": [\n            {\n                \"message\": \"\\\"categoryId\\\" with value \\\"123\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"categoryId\"\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"123\",\n                    \"label\": \"categoryId\",\n                    \"key\": \"categoryId\"\n                }\n            },\n            {\n                \"message\": \"\\\"tags[0]\\\" must be a string\",\n                \"path\": [\n                    \"tags\",\n                    0\n                ],\n                \"type\": \"string.base\",\n                \"context\": {\n                    \"label\": \"tags[0]\",\n                    \"value\": 1,\n                    \"key\": 0\n                }\n            },\n            {\n                \"message\": \"\\\"content\\\" is not allowed to be empty\",\n                \"path\": [\n                    \"content\"\n                ],\n                \"type\": \"string.empty\",\n                \"context\": {\n                    \"label\": \"content\",\n                    \"value\": \"\",\n                    \"key\": \"content\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjcifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMiRmT3FzQVBNb0JFYWUxSmUveW5YRVN1cHd5OFk4RTgyUXRmT1ZYdUczdGZRc1BrU3A2eUFMMiIsIm5hbWUiOiJ0ZXN0IiwiX192IjowfSwiaWF0IjoxNjQ4NzQzMzEzLCJleHAiOjE2NDg3NTA1MTN9.oSsZhTmm6FUNtXt_e6if9me4s_6GMxOWCJyPQkw1ItY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"This is my newest note update\",\r\n    \"category\": \"6245b10597f973bd07e032a7\",\r\n    \"tags\": [\r\n            \"Family\",\r\n            \"Not Important\",\r\n            \"Misc\"\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notes/?noteId=6245be08e2137bd9cf5881a2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notes",
+								""
+							],
+							"query": [
+								{
+									"key": "noteId",
+									"value": "6245be08e2137bd9cf5881a2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is my newest note update\",\r\n    \"category\": \"6245b10597f973bd07e032a7\",\r\n    \"tags\": [\r\n            \"Family\",\r\n            \"Not Important\",\r\n            \"Misc\"\r\n        ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/?noteId=6245be08e2137bd9cf5881a2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6245be08e2137bd9cf5881a2"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:35:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is my newest note update\",\r\n    \"category\": \"6245b10597f973bd07e032a7\",\r\n    \"tags\": [\r\n            \"Family\",\r\n            \"Not Important\",\r\n            \"Misc\"\r\n        ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/?noteId=6245be08e2137bd9cf5881a2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6245be08e2137bd9cf5881a2"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:36:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is my newest note update\",\r\n    \"categoryId\": \"6246db9ab8ba659b260c57ae\",\r\n    \"tags\": [\r\n            \"Family\",\r\n            \"Not Important\",\r\n            \"Misc\"\r\n        ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/?noteId=6246e24bb8ba659b260c57ba",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6246e24bb8ba659b260c57ba"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "310"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"136-z6EParZxHWujdof423yTA4L/ZDU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:42:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note updated!\",\n    \"note\": {\n        \"_id\": \"6246e24bb8ba659b260c57ba\",\n        \"content\": \"This is my newest note update\",\n        \"category\": \"6246db9ab8ba659b260c57ae\",\n        \"user\": \"6246d87cb8ba659b260c57a5\",\n        \"tags\": [\n            \"Family\",\n            \"Not Important\",\n            \"Misc\"\n        ],\n        \"createdAt\": \"2022-04-01T11:30:19.907Z\",\n        \"updatedAt\": \"2022-04-01T11:42:13.504Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Category Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is my newest note update\",\r\n    \"categoryId\": \"6246db9ab7ba659b260c57ae\",\r\n    \"tags\": [\r\n            \"Family\",\r\n            \"Not Important\",\r\n            \"Misc\"\r\n        ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/?noteId=6246e24bb8ba659b260c57ba",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6246e24bb8ba659b260c57ba"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-7Ykf80AhQdJsSmPW0fqQkBl+fNY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:43:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category does not exist!\"\n}"
+						},
+						{
+							"name": "Not Authorized",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"This is my newest note update\",\r\n    \"categoryId\": \"6246db9ab8ba659b260c57ae\",\r\n    \"tags\": [\r\n            \"Family\",\r\n            \"Not Important\",\r\n            \"Misc\"\r\n        ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/?noteId=6246e24bb8ba659b260c57ba",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "6246e24bb8ba659b260c57ba"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-O9Smjsci0SpcKyrpC2YLhS8oEdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:46:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authorized to use this category!\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"\",\r\n    \"categoryId\": \"6246db7ae\",\r\n    \"tags\": [1]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/?noteId=123",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									],
+									"query": [
+										{
+											"key": "noteId",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "887"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"377-/7OBruwMaJqJY7P4VbGPfPC6uSk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 11:48:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"query\": [\n            {\n                \"message\": \"\\\"noteId\\\" with value \\\"123\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"noteId\"\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"123\",\n                    \"label\": \"noteId\",\n                    \"key\": \"noteId\"\n                }\n            }\n        ],\n        \"body\": [\n            {\n                \"message\": \"\\\"categoryId\\\" with value \\\"6246db7ae\\\" fails to match the valid mongo id pattern\",\n                \"path\": [\n                    \"categoryId\"\n                ],\n                \"type\": \"string.pattern.name\",\n                \"context\": {\n                    \"name\": \"valid mongo id\",\n                    \"regex\": {},\n                    \"value\": \"6246db7ae\",\n                    \"label\": \"categoryId\",\n                    \"key\": \"categoryId\"\n                }\n            },\n            {\n                \"message\": \"\\\"tags[0]\\\" must be a string\",\n                \"path\": [\n                    \"tags\",\n                    0\n                ],\n                \"type\": \"string.base\",\n                \"context\": {\n                    \"label\": \"tags[0]\",\n                    \"value\": 1,\n                    \"key\": 0\n                }\n            },\n            {\n                \"message\": \"\\\"content\\\" is not allowed to be empty\",\n                \"path\": [\n                    \"content\"\n                ],\n                \"type\": \"string.empty\",\n                \"context\": {\n                    \"label\": \"content\",\n                    \"value\": \"\",\n                    \"key\": \"content\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Note/Notes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsibmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJlbWFpbCI6ImluaXQiLCJfaWQiOiJpbml0IiwiX192IjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX2lkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsIm5hbWUiOnRydWUsIl9fdiI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sInN0cmljdE1vZGUiOnRydWUsInNraXBJZCI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJmaWVsZHMiOnt9LCJleGNsdWRlIjpudWxsLCJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjcifSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MjQ1NjdhYjEzMDNlMDUxYWY1Mzc2ZjciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMiRmT3FzQVBNb0JFYWUxSmUveW5YRVN1cHd5OFk4RTgyUXRmT1ZYdUczdGZRc1BrU3A2eUFMMiIsIm5hbWUiOiJ0ZXN0IiwiX192IjowfSwiaWF0IjoxNjQ4NzQzMzEzLCJleHAiOjE2NDg3NTA1MTN9.oSsZhTmm6FUNtXt_e6if9me4s_6GMxOWCJyPQkw1ItY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noteIds\": [\"6245be08e2137bd9cf5881a2\",\"6245baece9b82b93692bcf68\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notes/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "JWT Expired",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"noteIds\": [\"6245be08e2137bd9cf5881a2\",\"6245baece9b82b93692bcf68\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-NLxHdTmGtBwpH6O42txxhQPNwcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:21:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"jwt expired\"\n}"
+						},
+						{
+							"name": "Not Authenticated",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"noteIds\": [\"6245be08e2137bd9cf5881a2\",\"6245baece9b82b93692bcf68\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-GLpZH/CcWzefo5f+0+Czmmf4FEI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:21:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not authenticated.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"noteIds\": [\"6246e24bb8ba659b260c57ba\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-SGMpaumDL/FFXME9xtwHJAyD/0I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:23:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note successfully deleted!\"\n}"
+						},
+						{
+							"name": "Note Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"noteIds\": [\"6246e24bb8ba659b260c57ba\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a-LqrJ53wBFXmnmIE+5qeCjvvwZl4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:23:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Could not find any matching notes to delete.\"\n}"
+						},
+						{
+							"name": "Invalid Data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"noteIds\": [123]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/notes/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "307"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"133-B+CLujvEY7OBnA5Ft/aPd5ZxJQw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Apr 2022 12:24:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"ValidationError\",\n    \"message\": \"Validation Failed\",\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"details\": {\n        \"body\": [\n            {\n                \"message\": \"\\\"noteIds[0]\\\" must be one of [string, object]\",\n                \"path\": [\n                    \"noteIds\",\n                    0\n                ],\n                \"type\": \"alternatives.types\",\n                \"context\": {\n                    \"types\": [\n                        \"string\",\n                        \"object\"\n                    ],\n                    \"label\": \"noteIds[0]\",\n                    \"value\": 123,\n                    \"key\": 0\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
