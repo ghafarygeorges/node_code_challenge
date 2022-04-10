@@ -4,17 +4,16 @@ Joi.objectId = require("joi-objectid")(Joi);
 
 const getNotesBody = Joi.object({
   categoryId: Joi.objectId().optional(),
-  tags: Joi.array().items(Joi.string()).optional(),
-  sort: Joi.number().optional(),
+  tags: Joi.array().items(Joi.objectId()).min(1).optional(),
 });
 
-const noteIdQuery = Joi.object({
+const noteIdParams = Joi.object({
   noteId: Joi.objectId().required(),
 });
 
 const createNoteBody = Joi.object({
   categoryId: Joi.objectId().required(),
-  tags: Joi.array().items(Joi.string()).required(),
+  tags: Joi.array().items(Joi.objectId()).required(),
   content: Joi.string().not().empty().required(),
 });
 
@@ -28,7 +27,7 @@ module.exports = {
   },
 
   getNoteById: {
-    query: noteIdQuery,
+    params: noteIdParams,
   },
 
   createNote: {
@@ -36,7 +35,7 @@ module.exports = {
   },
 
   updateNote: {
-    query: noteIdQuery,
+    params: noteIdParams,
     body: createNoteBody,
   },
 

@@ -3,25 +3,30 @@ const Schema = mongoose.Schema;
 
 const noteSchema = new Schema(
   {
-    content: {
-      type: String,
-      required: true,
-    },
-    category: {
+    content: String,
+
+    Category: {
       type: Schema.Types.ObjectId,
       ref: "Category",
-      required: true,
     },
-    user: {
+    User: {
       type: Schema.Types.ObjectId,
       ref: "User",
-      required: true,
     },
-    tags: [
+    Tags: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "Tag",
       },
     ],
+    createdBy: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+    updatedBy: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
   },
   { timestamps: true }
 );

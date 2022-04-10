@@ -6,10 +6,14 @@ const bodyParser = require("body-parser");
 const multer = require("multer");
 const { ValidationError } = require("express-validation");
 
+// Imported Files
+const config = require("./app-config");
+
 // Imported Routes
 const notesRoutes = require("./notes/notes-routes");
 const categoriesRoutes = require("./categories/categories-routes");
 const authRoutes = require("./auth/auth-routes");
+const tagsRoutes = require("./tags/tags-routes");
 
 const app = express();
 
@@ -31,6 +35,7 @@ app.use((req, res, next) => {
 // Middleware to use the imported routes we created in our app
 app.use("/notes", notesRoutes);
 app.use("/categories", categoriesRoutes);
+app.use("/tags", tagsRoutes);
 app.use("/auth", authRoutes);
 
 // express error handling middleware
@@ -47,7 +52,7 @@ app.use((error, req, res, next) => {
 
 // MongoDB connection using the mongoose package
 mongoose
-  .connect(process.env.DATABASE_URL, {
+  .connect(config.server.databaseUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -56,5 +61,5 @@ mongoose
   })
   .catch((err) => console.log(err));
 
-app.listen(process.env.PORT);
-console.log("Server started on port " + process.env.PORT);
+app.listen(config.server.port);
+console.log("Server started on port " + config.server.port);

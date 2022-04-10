@@ -5,7 +5,7 @@ const service = require("./categories-service");
 exports.getCategories = async (req, res, next) => {
   try {
     // categories: array of category objects
-    const categories = await service.getCategories(req.user._id);
+    const categories = await service.getCategories();
     res.status(200).send(categories);
   } catch (err) {
     if (!err.statusCode) {
@@ -16,11 +16,10 @@ exports.getCategories = async (req, res, next) => {
 };
 
 exports.getCategoryById = async (req, res, next) => {
-  const categoryId = req.query.categoryId;
   try {
     // category: category object
-    const category = await service.getCategoryById(req.user._id, req.query);
-    res.status(200).json(category);
+    const category = await service.getCategoryById(req.params);
+    res.status(200).send(category);
   } catch (err) {
     if (!err.statusCode) {
       err.statusCode = 500;
@@ -33,10 +32,7 @@ exports.createCategory = async (req, res, next) => {
   try {
     // category: category object
     const category = await service.createCategory(req.user._id, req.body);
-    res.status(201).json({
-      message: "Category created successfully!",
-      category: category,
-    });
+    res.status(201).send(category);
   } catch (err) {
     if (!err.statusCode) {
       err.statusCode = 500;
@@ -51,9 +47,9 @@ exports.updateCategory = async (req, res, next) => {
     const category = await service.updateCategory(
       req.user._id,
       req.body,
-      req.query
+      req.params
     );
-    res.status(200).json({ message: "Category updated!", category: category });
+    res.status(200).send(category);
   } catch (err) {
     if (!err.statusCode) {
       err.statusCode = 500;
@@ -64,11 +60,11 @@ exports.updateCategory = async (req, res, next) => {
 
 exports.deleteCategory = async (req, res, next) => {
   try {
-    await service.deleteCategory(req.user._id, req.body);
+    await service.deleteCategory(req.body);
     // check if we are deleting one or many categories to format the response message accordingly
     let message = req.body.categoryIds.length > 1 ? "Categories" : "Category";
     message += " successfully deleted!";
-    res.status(200).json({ message: message });
+    res.status(200).send({ message: message });
   } catch (err) {
     if (!err.statusCode) {
       err.statusCode = 500;

@@ -27,7 +27,7 @@ router.get(
 );
 
 router.get(
-  "/id",
+  "/:noteId",
   validate(validator.getNoteById, {}, { abortEarly: false }),
   getNoteById
 );
@@ -39,7 +39,7 @@ router.post(
 );
 
 router.put(
-  "/",
+  "/:noteId",
   validate(validator.updateNote, {}, { abortEarly: false }),
   updateNote
 );

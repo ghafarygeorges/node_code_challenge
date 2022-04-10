@@ -4,7 +4,14 @@ const { validate } = require("express-validation");
 
 // Imported files
 const validator = require("./auth-validation");
-const { signup, login } = require("./auth-controller");
+const {
+  signup,
+  login,
+  getUsers,
+  refresh,
+  logout,
+} = require("./auth-controller");
+const isAuth = require("../middleware/is-auth");
 
 const router = express.Router();
 
@@ -21,5 +28,19 @@ router.post(
   validate(validator.login, {}, { abortEarly: false }),
   login
 );
+
+router.post(
+  "/refresh",
+  validate(validator.refresh, {}, { abortEarly: false }),
+  refresh
+);
+
+router.delete(
+  "/logout",
+  validate(validator.logout, {}, { abortEarly: false }),
+  logout
+);
+
+router.get("/", isAuth, getUsers);
 
 module.exports = router;

@@ -2,7 +2,7 @@ const { Joi } = require("express-validation");
 // package to be able to validate mongoDB id formats
 Joi.objectId = require("joi-objectid")(Joi);
 
-const categoryIdQuery = Joi.object({
+const categoryIdParams = Joi.object({
   categoryId: Joi.objectId().required(),
 });
 
@@ -16,13 +16,13 @@ const categoryIdsArrayBody = Joi.object({
 
 module.exports = {
   getCategoryById: {
-    query: categoryIdQuery,
+    params: categoryIdParams,
   },
   createCategory: {
     body: categoryNameBody,
   },
   updateCategory: {
-    query: categoryIdQuery,
+    params: categoryIdParams,
     body: categoryNameBody,
   },
   deleteCategory: {

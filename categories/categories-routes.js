@@ -23,7 +23,7 @@ router.use("/", isAuth);
 router.get("/", getCategories);
 
 router.get(
-  "/id",
+  "/:categoryId",
   validate(validator.getCategoryById, {}, { abortEarly: false }),
   getCategoryById
 );
@@ -35,7 +35,7 @@ router.post(
 );
 
 router.put(
-  "/",
+  "/:categoryId",
   validate(validator.updateCategory, {}, { abortEarly: false }),
   updateCategory
 );

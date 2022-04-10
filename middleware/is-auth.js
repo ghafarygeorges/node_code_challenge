@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const config = require("../app-config");
 
 module.exports = (req, res, next) => {
   // get the authorizatoin header value ( jwt in our case )
@@ -14,7 +15,7 @@ module.exports = (req, res, next) => {
   let decodedToken;
   try {
     // decode token using secret code
-    decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    decodedToken = jwt.verify(token, config.jwt.accessSecret);
   } catch (err) {
     err.statusCode = 500;
     throw err;
@@ -26,6 +27,6 @@ module.exports = (req, res, next) => {
     throw error;
   }
   // if everything works and the user is authenticated, save user data in our request and go to next middleware in line
-  req.user = decodedToken._doc;
+  req.user = decodedToken;
   next();
 };

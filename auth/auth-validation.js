@@ -13,11 +13,21 @@ const signupValidation = Joi.object({
   name: Joi.string().not().empty().required(),
 });
 
+const refreshTokenValidation = Joi.object({
+  token: Joi.string().not().empty().required(),
+});
+
 module.exports = {
   login: {
     body: loginValidation,
   },
   signup: {
     body: signupValidation,
+  },
+  refresh: {
+    body: refreshTokenValidation,
+  },
+  logout: {
+    body: refreshTokenValidation,
   },
 };
